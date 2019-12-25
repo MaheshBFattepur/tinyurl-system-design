@@ -16,7 +16,7 @@ Generate and Get URL details
 
 # Note
 ```
-This implementation doesn't have below concepts but its a simple application understand tinyurl system design with counter based solution
+This implementation doesn't have below concepts but its a simple application to understand tinyurl system design with counter based solution
 1. Load balancer
 2. Zookeeper
 ```
