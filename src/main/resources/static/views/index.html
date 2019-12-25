@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Main Page</title>
+</head>
+<body ng-app="tinyurl">
+	<hr />
+	<div class="container" ng-controller="TinyUrlController">
+		<div class="row">
+			<h3>Considered 7 max length tinyURL and base62: Total possible
+				tinyURL is pow(63, 7)</h3>
+		</div>
+		<hr />
+		<div class="row">
+			<label>Long URL</label> <input type="text" ng-model="longUrl"
+				class="input-sm spacing" />
+			<button ng-click="generateTinyUrl()" class="btn btn-sm btn-info">Generate
+				Tiny URL</button>
+		</div>
+		<hr />
+		<div class="row">
+			<div class="">
+				<h3>Tiny URL Details -</h3>
+				<span class="spacing">{{res_data | json}}</span>
+			</div>
+		</div>
+		<hr />
+		<div class="row">
+			<label>Tiny URL</label> <input type="text" ng-model="tinyUrl"
+				class="input-sm spacing" />
+			<button ng-click="getLongUrl()" class="btn btn-sm btn-info">Get
+				Long URL</button>
+			<div class="">
+				<h3>Long URL Details -</h3>
+				<span class="spacing">{{long_res_data | json}}</span>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/TinyUrlController.js"></script>
+<script src="js/app/TinyUrlService.js"></script>
+<link rel="stylesheet" href="css/lib/bootstrap.min.css" />
+<link rel="stylesheet" href="css/app/app.css" />
+</html>
